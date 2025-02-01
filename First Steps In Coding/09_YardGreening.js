@@ -1,4 +1,4 @@
-//This function takes the area of a yard and calculates the final price for greening it and the discount amount
+//This function takes the area of a yard and calculates the final price for greening it and the discount amount.
 function totalPriceCalc(_area) {
     const pricePerSquareMeter = 7.61;
     const discount = 0.18;

@@ -1,4 +1,4 @@
-//This function calculates the area of a square by a given side
+//This function calculates the area of a square by a given side.
 function squareArea(input) {
     let side = Number(input);
     let area = side * side;

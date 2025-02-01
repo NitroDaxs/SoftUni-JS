@@ -1,4 +1,4 @@
-//This function prints a greeting message on the console
+//This function prints a greeting message on the console.
 function greetings(input) {
     console.log("Hello, " + input + "!");
 }

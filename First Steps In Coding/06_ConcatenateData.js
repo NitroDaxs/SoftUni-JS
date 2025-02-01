@@ -1,4 +1,4 @@
-//This function prints a person's information on the console from the input data
+//This function prints a person's information on the console from the input data.
 function concentrateData(_firstName, _lastName, _age, _town) {
     let firstName = _firstName.toString();
     let lastName = _lastName.toString();

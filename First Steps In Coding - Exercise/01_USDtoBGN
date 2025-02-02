@@ -1,0 +1,9 @@
+//This function is responsible for converter amount of usd to bgn.
+function converter(amount) {
+    const bgnRateToUsd = 1.79549;
+    let usd = Number(amount);
+    let bgn = usd * bgnRateToUsd;
+    console.log(bgn);
+}
+
+converter("22"); 

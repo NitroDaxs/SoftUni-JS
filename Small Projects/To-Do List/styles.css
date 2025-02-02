@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.toDoList {
+    background-color: #E0D3AF;
+    width: 500px;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 1rem;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.inputContainer {
+    position: relative;
+    width: 80%;
+}
+
+.inputBox {
+    width: 100%;
+    padding: 10px;
+    padding-right: 60px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border-radius: 50px;
+}
+
+.btn {
+    background: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.task-item {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+    word-break: break-word;
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    color: green;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}

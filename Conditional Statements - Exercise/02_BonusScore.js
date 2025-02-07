@@ -1,3 +1,4 @@
+//This function calculates the bonus points for a given score.
 function bonusPoints(input) {
     let bonus = 0.0;
 

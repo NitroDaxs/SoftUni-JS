@@ -1,3 +1,4 @@
+//This function takes the current time and adds 15 minutes to it.
 function timeCalculation(hour, minute) {
     if (minute + 15 < 60) {
         minute += 15;

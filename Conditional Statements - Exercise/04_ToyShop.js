@@ -1,3 +1,4 @@
+//This function calculates the total sum and prints the appropriate message.
 function toyShop(vacationPrice, puzzleCount, dollsCount, bearsCount, minionsCount, trucksCount) {
     const puzzlePrice = 2.60;
     const dollPrice = 3;

@@ -1,3 +1,4 @@
+//This function takes three numbers and adds them together to get the total time in seconds and convert to minutes.
 function sumSeconds(firstTime, secondTime, thirdTime) {
     let totalTime = firstTime + secondTime + thirdTime;
     let timeInMinutes = Math.floor(totalTime / 60);

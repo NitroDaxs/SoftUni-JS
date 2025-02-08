@@ -1,3 +1,4 @@
+//This function prints a person's title based on their age and gender.
 function title(age, gender) {
     if (gender === 'm') {
         if (age >= 16) {

@@ -1,3 +1,4 @@
+//This function checks if a given day is a working day or a weekend.
 function workingOrWeekend(input) {
     switch (input) {
         case 'Monday':

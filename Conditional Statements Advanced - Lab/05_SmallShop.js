@@ -1,3 +1,4 @@
+//This function calculates the price for a product in a given city.
 function pricePerCity(product, city, quantity) {
     let total = 0;
 

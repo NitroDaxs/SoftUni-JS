@@ -1,3 +1,4 @@
+//This function prints the type of an animal based on its input.
 function animalType(input) {
     switch (input) {
         case 'dog':

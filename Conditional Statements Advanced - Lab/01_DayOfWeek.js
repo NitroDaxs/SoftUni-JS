@@ -1,3 +1,4 @@
+//This function returns the day of the week for a given number.
 function daysFromInput(input) {
     switch (input) {
         case 1:

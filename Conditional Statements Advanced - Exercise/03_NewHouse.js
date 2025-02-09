@@ -1,3 +1,4 @@
+//This function calculates the price of flowers and prints the appropriate message.
 function flowerPrice(flowerType, flowerCount, budget) {
     const rosePrice = 5.00;
     const dhaliaPrice = 3.80;

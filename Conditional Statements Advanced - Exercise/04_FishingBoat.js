@@ -1,3 +1,4 @@
+//This function calculates if the budget is enough and prints the appropriate message.
 function fishingBoat(budget, season, fishermen) {
     let rent = 0.0;
     let discount = 0.0;

@@ -1,3 +1,4 @@
+//This function prints the outfit and shoes depending on the temperature and time of the day.
 function outfitPicker(temp, timeOfDay) {
     let outfit = '';
     let shoes = '';

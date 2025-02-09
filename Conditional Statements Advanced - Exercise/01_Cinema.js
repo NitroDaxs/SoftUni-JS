@@ -1,3 +1,4 @@
+//This function prints the total price per seat depending on the type of the ticket.
 function cinema(type, rows, cols) {
     let price = 0.0;
 

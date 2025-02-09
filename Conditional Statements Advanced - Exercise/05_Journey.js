@@ -1,3 +1,4 @@
+//This function calculates if the budget is enough for the vacation and prints the appropriate message.
 function vacation(budget, season) {
     let destination = '';
     let price = 0.0;

@@ -1,3 +1,4 @@
+//This function prints the histogram of a given number of numbers.
 function histogram(input) {
     let inputNum = Number(input[0]);
     let p1 = 0.0;

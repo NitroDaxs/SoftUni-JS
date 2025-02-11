@@ -1,3 +1,4 @@
+//This function prints the amount of money saved or not saved.
 function moneySaved(age, preceOfApplience, preceOfToy) {
     let sum = 0;
     let toyCount = 0;

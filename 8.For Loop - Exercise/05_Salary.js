@@ -1,3 +1,4 @@
+//This function calculates the fine for a given number of tabs.
 function fines(input) {
     let tabs = Number(input[0]);
     let salaty = Number(input[1]);

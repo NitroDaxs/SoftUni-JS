@@ -1,0 +1,320 @@
+body{
+    background-color: #444B73;
+    margin: 0;;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #43509D;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    font-family: sans-serif ;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #F7E6D5;
+}
+
+
+.profile{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding-top: 5rem;
+padding-bottom: 5rem;
+background-color: #43509D;
+font-family: serif ;
+color: #DADADA ;
+}
+
+.avatar{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile > h1{
+    color: #F7E6D5;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+}
+
+.profile > p{
+    font-size: 1.5rem;
+    font-family: "Merriweather", serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+hr{
+    display: block;
+    height: 5px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: #383A49;
+}
+
+.education{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr 1fr 1fr; 
+    font-family: sans-serif;
+    color: #F7E6D5;
+    margin-bottom: 5rem;
+}
+
+.education-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 5;
+    
+}
+
+.education-icon{
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+.education-text{
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.education-text > h3{
+    margin: 0.5rem;
+    margin-left: 0;
+    font-size: 1.5rem;
+}
+
+.education-text > p{
+    margin: 0.5rem;
+    font-family: "Merriweather", serif;
+    margin-left: 0;
+    font-size: 1.2rem;
+}
+
+.certificate-icon{
+    grid-row: 3;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+.certificate-text{
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.certificate-text > h3{
+    margin: 0.5rem;
+    margin-left: 0;
+    font-size: 1.5rem;
+}
+
+.certificate-text > p{
+    margin: 0.5rem;
+    font-family: "Merriweather", serif;
+    margin-left: 0;
+    font-size: 1.2rem;
+}
+
+.work-experience{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr 1fr; 
+    font-family: sans-serif;
+    color: #F7E6D5;
+    margin-bottom: 5rem;
+}
+
+.work-experience-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 5;
+}
+
+.work-experience-icon{
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+.work-experience-text{
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.work-experience-text > h3{
+    margin: 0.5rem;
+    margin-left: 0;
+    font-size: 1.5rem;
+}
+
+.work-experience-text > p{
+    margin: 0.5rem;
+    font-family: "Merriweather", serif;
+    margin-left: 0;
+    font-size: 1.2rem;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr 1fr; 
+    font-family: sans-serif;
+    color: #F7E6D5;
+    margin-bottom: 5rem;
+}
+
+.projects-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 5;
+}
+
+.projects-icon{
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+.projects-text{
+    grid-row: 2;
+    grid-column: 3;
+}
+.projects-text > p{
+    margin: 0.5rem;
+    font-family: "Merriweather", serif;
+    margin-left: 0;
+    font-size: 1.2rem;
+}
+
+.project-link{
+    color: #DADADA ;
+    text-decoration: none;
+    font-family: sans-serif;
+    border: solid 2px #F7E6D5;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.project-link:hover{
+    background-color: #F7E6D5;
+    color: #444B73;
+}
+
+.contact-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-family: serif ;
+    color: #DADADA ;
+}
+.contact-me-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+
+.contact-me-title{
+    color: #F7E6D5;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.contact-me-text > p{
+    margin: 0.5rem;
+    font-family: "Merriweather", serif;
+    margin-left: 0;
+    font-size: 1.5rem;
+}
+
+.email-button{
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #F7E6D5;
+    background-color: 444B73;
+    color: #F7E6D5;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+.email-button:hover{
+    background-color: #F7E6D5;
+    color: #444B73;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    color: #DADADA ;
+    background-color: #43509D;
+}
+
+.github-link{
+    color: #DADADA ;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    margin-top: 1rem;
+}
+
+.github-icon{
+    position: relative;
+    top: 0.4rem;
+}

@@ -9,19 +9,35 @@
     <title>Miroslav Atanasov</title>
 </head>
 <body>
-    <nav class="navbar" id="myNavbar">
-        <div class="nav-links">
-            <a href="#hero">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#work-experience">Work Experience</a>
-            <a href="#contact-me">Contact</a>
-            <a>
-                <button class="theme-toggle" type="button" data-theme-toggle><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
-                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
-                </svg></button>
-            </a>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="navbarSizing()"><i class="fa fa-bars"></i></a>
+    <nav>
+        <ul class = "sideBar">
+            <li ><a><button onclick="hideSidebar()" class="hideSideBar-btn" style="cursor: pointer;"><svg  xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="26" height="26" class="bi bi-list" viewBox="0 0 16 16">
+                <path d="M2.354 2.354a.5.5 0 0 1 .708 0L8 7.293l4.938-4.939a.5.5 0 1 1 .707.708L8.707 8l4.938 4.938a.5.5 0 0 1-.707.707L8 8.707l-4.938 4.938a.5.5 0 1 1-.708-.707L7.293 8 2.354 3.062a.5.5 0 0 1 0-.708z"/>
+            </svg></button>
+            </a></li>
+            <li><a href="#hero" class="heroNavItem">Education</a></li>
+            <li><a href="#work-experience" class="workExperienceNavItem">Work Experience</a></li>
+            <li><a href="#projects" class="projectsNavItem">Projects</a></li>
+            <li><a href="#contact-me" class="contactMeNavItem">Contact</a></li>
+            <button onclick="toggleTheme()" class="theme-toggle" type="button" data-theme-toggle><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+            </svg></button>
+        </ul>
+        <ul>
+            <li class = "hideOnMobile"><a href="#hero" class="heroNavItem">Education</a></li>
+            <li class = "hideOnMobile"> <a href="#projects" class="projectsNavItem">Projects</a></li>
+            <li class = "hideOnMobile"><a href="#work-experience" class="workExperienceNavItem">Work Experience</a></li>
+            <li class = "hideOnMobile"><a href="#contact-me" class="contactMeNavItem">Contact</a></li>
+            <li > 
+                <a>
+                    <button   onclick="toggleTheme()" class="theme-toggle hideOnMobile"  type="button" data-theme-toggle><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+                    </svg></button>
+                </a></li>
+            <li class = "hideOnDesktop showSideBarButton"onclick="showSidebar()" style="cursor: pointer;"><a><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg></i></a></li>
+        </ul>
     </nav>
         <div class="container">
             <div class="profile" id="hero">
@@ -49,13 +65,13 @@
             </div>
             <div class="certificate-text">
                 <h3>Certificate of Completion</h3>
-                <p>C# ASP.NET</p>
+                <p><span class="bold">C#</span> ASP.NET</p>
                 <p>MS SQL</p>
-                <p>C# Entity Framework</p>
-                <p>C# OOP</p>
-                <p>C# Advanced</p>
-                <p>C# Fundamentals</p>
-                <p>C# Basics</p>
+                <p><span class="bold">C#</span> Entity Framework</p>
+                <p><span class="bold">C#</span> OOP</p>
+                <p><span class="bold">C#</span> Advanced</p>
+                <p><span class="bold">C#</span> Fundamentals</p>
+                <p><span class="bold">C#</span> Basics</p>
             </div>
         </div>
         <hr>
@@ -68,9 +84,9 @@
             </div>
             <div class="work-experience-text">
                 <h3>Hospitality</h3>
-                <p>5* Hotel</p>
+                <h4>5* Hotel</h4>
                 <p>March 2023 - November 2024: Shift Superviser</p>
-                <p>4* Hotel</p>
+                <h4>4* Hotel</h4>
                 <p>April 2021 - January 2023: Shift Superviser</p>
                 <p>July 2019 - November 2020: BellBoy</p>
              </div>
@@ -88,7 +104,7 @@
         </div>
         <div class="projects-text">
             <div class="project-catio">
-                <p >Catio - C# ASP.NET Application for subscription based cat food delivery.</p>
+                <p ><span class="bold">Catio</span> - C# ASP.NET Application for subscription based cat food delivery.</p>
                 <a class="project-link" href="https://github.com/NitroDaxs/CatFoodSubscription-C-WEB-exam" target="_blank" rel="noopener noreferrer">Open</a>
             </div>
         </div>    
@@ -113,7 +129,7 @@
         </div>
         <p>© 2025 Miroslav Atanasov</p>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

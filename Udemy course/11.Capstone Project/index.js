@@ -1,5 +1,6 @@
-const button = document.querySelector("[data-theme-toggle]");
-function toggleTheme(){
+const button = document.querySelector("[data-theme-toggle-sidebar]");
+const butto2 = document.querySelector("[data-theme-toggle]");
+function  toggleTheme(){
   const currentThemeSetting = localStorage.getItem("data-theme");
   const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
 
@@ -11,6 +12,7 @@ function toggleTheme(){
   </svg>`;
 
   button.innerHTML = newTheme === "dark" ? sunIcon : moonIcon;
+  butto2.innerHTML = newTheme === "dark" ? sunIcon : moonIcon;
 
   document.documentElement.setAttribute("data-theme", newTheme);
 

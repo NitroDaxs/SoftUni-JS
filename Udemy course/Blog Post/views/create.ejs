@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1 class="title">Create Post</h1>
+<div class="container">
+<form action="/create"  class="createForm" method="POST">
+    <input type="text" name="title"required   class="input-Title" placeholder="Title">
+    <div>
+        <input type="text" name="author" required  class="input-Author" placeholder="Author">
+        <input type="text" name="password" required  class="input-Password" placeholder="Password">
+    </div>
+    <textarea type="text" name="textContent" required class="input-Content" placeholder="Text Content"></textarea>
+    <select  name="category" required class="input-Category">
+        <option value="" disabled selected>Select a Category</option>
+        <option value="Technology">Technology</option>
+        <option value="Health">Health</option>
+        <option value="Business">Business</option>
+        <option value="Education">Education</option>
+        <option value="Entertainment">Entertainment</option>
+    </select>
+    <input type="submit" class="input-Submit" value="Create Post">
+</form>
+</div>
+
+<%- include("partials/footer.ejs") %>
+
+

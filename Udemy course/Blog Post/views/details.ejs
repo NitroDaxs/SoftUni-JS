@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+  
+    <h1><%= post.title %></h1>
+    <p><%= post.textContent %></p>
+    <p>Written by: <%= post.author %></p>
+    <p>Date: <%= post.date %></p>
+
+    <form action="/delete/<%=post.id%>" method="GET">
+        <input type="submit" value="Delete Post">
+    </form>
+
+    <form action="/edit/<%=post.id%>" method="GET">
+        <input type="submit" value="edit">
+    </form>
+
+   <%- include("partials/footer.ejs") %>

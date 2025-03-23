@@ -1,0 +1,97 @@
+import express from "express";
+import bodyParser from "body-parser";
+import Post from "./models/Post.js";
+
+const app = express();
+const port = 3000;
+app.use(express.static("public"));
+
+const postsArray = [];
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.get("/", (req, res) => {
+  res.render("index.ejs", { posts: postsArray });
+});
+
+app.get("/home", (req, res) => {
+  res.render("index.ejs", { posts: postsArray });
+});
+
+app.get("/create", (req, res) => {
+  res.render("create.ejs");
+});
+
+app.post("/create", (req, res) => {
+  let date = new Date();
+  let currentPost = new Post(
+    postsArray.length + 1,
+    req.body.title,
+    req.body.textContent,
+    req.body.author,
+    req.body.password,
+    date.toDateString(),
+    req.body.category
+  );
+
+  postsArray.push(currentPost);
+  res.redirect("/");
+});
+
+app.get("/details/:id", (req, res) => {
+  const postId = req.params.id;
+  let currentPost = postsArray.find((post) => post.id === parseInt(postId));
+  res.render("details.ejs", { post: currentPost });
+});
+
+app.get("/delete/:id", (req, res) => {
+  const postId = Number(req.params.id);
+  let currentPost = postsArray.find((post) => post.id === postId);
+  res.render("delete.ejs", { post: currentPost });
+});
+
+app.post("/delete/:id", (req, res) => {
+  const postId = Number(req.params.id);
+  if (req.body.password !== postsArray[postId - 1].password) {
+    res.redirect("/delete/" + postId);
+    return;
+  }
+  postsArray.splice(
+    postsArray.findIndex((post) => post.id === postId),
+    1
+  );
+  res.redirect("/");
+});
+
+app.get("/edit/:id", (req, res) => {
+  const postId = Number(req.params.id);
+  let currentPost = postsArray.find((post) => post.id === postId);
+  res.render("edit.ejs", { post: currentPost });
+});
+
+app.post("/edit/:id", (req, res) => {
+  const postId = Number(req.params.id);
+  let currentPost = postsArray.find((post) => post.id === postId);
+  if (req.body.password !== currentPost.password) {
+    res.redirect("/edit/" + postId);
+    return;
+  }
+  currentPost.title = req.body.title;
+  currentPost.textContent = req.body.textContent;
+  currentPost.author = req.body.author;
+  currentPost.category = req.body.category;
+  res.redirect("/details/" + postId);
+});
+
+app.get("/filter", (req, res) => {
+  if (req.query.category === "All") {
+    res.render("index.ejs", { posts: postsArray });
+    return;
+  }
+  const category = req.query.category;
+  let filteredPosts = postsArray.filter((post) => post.category === category);
+  res.render("index.ejs", { posts: filteredPosts });
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});

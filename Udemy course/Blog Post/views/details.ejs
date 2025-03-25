@@ -3,21 +3,26 @@
     <div class="post-container">
         <div>
             <div>
-                <h1><%= post.title %></h1>
+                <h1 class="post-title"><%= post.title %></h1>
                 <img class="avatar" src=<%= post.avatar %> alt="avatar">
             </div>
             <p class="text-content"><%= post.textContent %></p>
         </div>
-        <p>Written by: <%= post.author %></p>
-        <p>Date: <%= post.date %></p>
-        
-        <form action="/delete/<%=post.id%>" method="GET">
-            <input type="submit" value="Delete Post">
-        </form>
-        
-        <form action="/edit/<%=post.id%>" method="GET">
-            <input type="submit" value="edit">
-        </form>
+        <div class="post-info">
+            <div class="post-buttons">
+                <form action="/delete/<%=post.id%>" method="GET">
+                    <input class="delete-button" type="submit" value="Delete">
+                </form>
+                
+                <form action="/edit/<%=post.id%>" method="GET">
+                    <input class="edit-button" type="submit" value="Edit">
+                </form>
+            </div>
+            <div class="post-author">
+                <p>Written by: <%= post.author %></p>
+                <p>Date: <%= post.date %></p>
+            </div>
+        </div>
     </div>
     
 </div>

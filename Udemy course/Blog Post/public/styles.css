@@ -19,7 +19,6 @@ nav{
 }
 
 nav ul{
-    width: 100%;
     list-style: none;
     display: flex;
     justify-content: left;
@@ -107,6 +106,13 @@ footer p{
     border: solid 1px #F7E6D5;
     border-radius: 5px;
 }
+.input-Avatar{
+    display: flex;
+    width: 414px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding: 5px;
+}
 .input-Category{
     display: flex;
     width: 428px;
@@ -188,7 +194,58 @@ h1{
     background-color: #43509D;
     color: #F7F7F7;
 }
+.post-info{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    font-size: 1rem;
+}
+a{
+    text-decoration: none;
+}
 
+.post-title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.post-content{
+    font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.filter-Container{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.post-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border: #43509D solid 1px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #F7F7F7;
+    padding: 10px;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.avatar{
+    height: 200px;
+    margin: 10px;
+    float: left; 
+}
+
+.text-content{
+    overflow-wrap: break-word;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
 @media screen and (max-width: 800px) {
     .feed {
         grid-template-columns: repeat(1, 1fr);

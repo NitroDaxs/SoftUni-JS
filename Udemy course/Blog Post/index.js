@@ -4,9 +4,46 @@ import Post from "./models/Post.js";
 
 const app = express();
 const port = 3000;
+const defaultAvatar = "/images/avatar.webp";
+
 app.use(express.static("public"));
 
 const postsArray = [];
+let dbSeed1 = new Post(
+  1,
+  "First Post",
+  "This is the first post",
+  "John Doe",
+  "1234",
+  new Date().toDateString(),
+  "Health",
+  defaultAvatar
+);
+postsArray.push(dbSeed1);
+let dbSeed2 = new Post(
+  2,
+  "Second Post",
+  "This is the second post",
+  "John Doe",
+  "1234",
+  new Date().toDateString(),
+  "Health",
+  defaultAvatar
+);
+postsArray.push(dbSeed2);
+let dbSeed3 = new Post(
+  3,
+  "Third Post",
+  "This is the third post",
+  "John Doe",
+  "1234",
+  new Date().toDateString(),
+  "Technology",
+  defaultAvatar
+);
+postsArray.push(dbSeed3);
+
+app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
@@ -23,15 +60,30 @@ app.get("/create", (req, res) => {
 
 app.post("/create", (req, res) => {
   let date = new Date();
-  let currentPost = new Post(
-    postsArray.length + 1,
-    req.body.title,
-    req.body.textContent,
-    req.body.author,
-    req.body.password,
-    date.toDateString(),
-    req.body.category
-  );
+  let currentPost = new Post();
+  if (req.body.avatarUrl === "") {
+    currentPost = new Post(
+      postsArray.length + 1,
+      req.body.title,
+      req.body.textContent,
+      req.body.author,
+      req.body.password,
+      date.toDateString(),
+      req.body.category,
+      defaultAvatar
+    );
+  } else {
+    currentPost = new Post(
+      postsArray.length + 1,
+      req.body.title,
+      req.body.textContent,
+      req.body.author,
+      req.body.password,
+      date.toDateString(),
+      req.body.category,
+      req.body.avatarUrl
+    );
+  }
 
   postsArray.push(currentPost);
   res.redirect("/");

@@ -21,11 +21,17 @@
     <div class="feed">
         <% posts.forEach(post => { %>
             <div class="post">
-                <a href="/details/<%= post.id %>"><h2><%= post.title %></h2></a>
-                <p><%= post.textContent %></p>
-                <p>Written by: <%= post.author %></p>
-                <p>Date: <%= post.date %></p>
-                <p>Category: <%= post.category %></p>
+                <a href="/details/<%= post.id %>"><h2 class="post-title"><%= post.title %></h2></a>
+                <p class="post-content"><% if(post.textContent.length > 140){ %>
+                    <%= post.textContent.slice(0, 140) %> ....</p>
+                    <% } else { %>
+                    <%= post.textContent %></p>
+                    <% } %>
+                <div class="post-info">
+                    <p>Written by: <%= post.author %></p>
+                    <p>Date: <%= post.date %></p>
+                    <p>Category: <%= post.category %></p>
+                </div>
             </div>
         <% }) %>
     </div>

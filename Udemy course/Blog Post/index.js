@@ -92,12 +92,20 @@ app.post("/create", (req, res) => {
 app.get("/details/:id", (req, res) => {
   const postId = req.params.id;
   let currentPost = postsArray.find((post) => post.id === parseInt(postId));
+  if (currentPost === undefined) {
+    res.render("error404.ejs");
+    return;
+  }
   res.render("details.ejs", { post: currentPost });
 });
 
 app.get("/delete/:id", (req, res) => {
   const postId = Number(req.params.id);
   let currentPost = postsArray.find((post) => post.id === postId);
+  if (currentPost === undefined) {
+    res.render("error404.ejs");
+    return;
+  }
   res.render("delete.ejs", { post: currentPost });
 });
 
@@ -117,12 +125,20 @@ app.post("/delete/:id", (req, res) => {
 app.get("/edit/:id", (req, res) => {
   const postId = Number(req.params.id);
   let currentPost = postsArray.find((post) => post.id === postId);
+  if (currentPost === undefined) {
+    res.render("error404.ejs");
+    return;
+  }
   res.render("edit.ejs", { post: currentPost });
 });
 
 app.post("/edit/:id", (req, res) => {
   const postId = Number(req.params.id);
   let currentPost = postsArray.find((post) => post.id === postId);
+  if (currentPost === undefined) {
+    res.render("error404.ejs");
+    return;
+  }
   if (req.body.password !== currentPost.password) {
     res.redirect("/edit/" + postId);
     return;

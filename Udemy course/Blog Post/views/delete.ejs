@@ -1,10 +1,18 @@
 <%- include("partials/header.ejs") %>
 
-    <h1>Are you sure you want to delete this post?</h1>
+<div class="container">
 
-    <form action="/delete/<%= post.id %>" method="POST">
-        <input type="text" name="password" required>
-        <input type="submit" value="Delete Post">
-    </form>
-    
+    <div class="delete-container">
+        
+        <h1>Are you sure you want to delete this post?</h1>
+        <div class="delete-form">
+            <form action="/delete/<%= post.id %>" method="POST">
+                    <input class="input-Password" type="text" name="password" placeholder="Enter Password" required>
+                    <input class="input-Delete" type="submit" value="Delete Post">
+            </form>
+        </div>
+        
+    </div>
+</div>
+        
 <%- include("partials/footer.ejs") %>
